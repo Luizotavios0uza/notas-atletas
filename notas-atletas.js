@@ -16,14 +16,14 @@ let atletas = [
       notas: [10, 10, 10, 9, 9.5]
     }
    ];
- function compare(a,b) {return a - b;};
+ function na(a,b) {return a - b;};
 
 for (let i = 0; i < atletas.length; i++) {
   let soma = 0;
-  atletas[i].notasComputadas = atletas[i].notas;
-  atletas[i].notasComputadas = atletas[i].notasComputadas.sort(compare).slice(1,4);
-  atletas[i].notasComputadas.map(function(notas) {
+  atletas[i].notasx = atletas[i].notas;
+  atletas[i].notasx = atletas[i].notas.sort(na).slice(1,4);
+  atletas[i].notasx.map(function(notas){
     soma = soma + notas;
   });
-  console.log("Atleta: " + atletas[i].nome + "Notas" + atletas[i].notas + "Média dos atletas" + (soma / atletas[i].notasComputadas.length));
+  console.log("Atleta: " + atletas[i].nome + "Notas" + atletas[i].notas + "Média dos atletas" + (soma / atletas[i].notasx.length));
 };
